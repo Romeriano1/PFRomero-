@@ -18,19 +18,11 @@ footer {
   text-align: center;
 }
 
-.mate {
-  width: 800px;
-  height: 720px;
-}
-
-.mate3 {
-  width: 720px;
-  height: 720px;
-}
-
+.mate,
+.mate3,
 .camiseta {
-  width: 1100px;
-  height: 900px;
+  width: 100%; 
+  height: auto; 
 }
 
 input,
@@ -40,14 +32,15 @@ textarea {
   padding: 10px;
   border: 2px solid;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 16px; 
   margin-bottom: 10px;
 }
 
 h1, h2, h3 {
   text-align: center;
   text-decoration: underline;
-  margin: 20px 0px;
+  margin: 10px 0; 
+  font-size: 24px;
 }
 
 textarea {
@@ -90,78 +83,74 @@ label {
   color: black;
 }
 
-p {
+p{
   margin-top: 15px;
-  font-size: 25px;
+  font-size: 18px; 
 }
-
-.titulouno {
-  width: 100%;
-  background-color: burlywood;
-  padding: 15px;
-  margin: 20px 0;
-  margin-right: 30px;
-}
-
+.titulouno,
 .titulodos {
   width: 100%;
   background-color: burlywood;
-  padding-bottom: 30px;
-  margin: 20px 0;
-  margin-right: 30px;
-  padding-top: 6px;
-}
-
-h1 {
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 30px;
-  text-decoration: none;
+  padding: 15px;
+  margin: 20px auto; 
 }
 
 .nav {
   width: 100%;
   display: flex;
-  align-content: center;
-  justify-content: space-between;
-  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav ul {
-  width: 100%;
   list-style-type: none;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav ul li {
-  display: inline-block;
-  margin: 20px 70px;
-  font-size: 25px;
+  display: inline;
+  margin: 0 5px; 
 }
 
-@media screen and (max-width: 400px) {
+.nav ul li:not(:last-child)::after {
+  content: "|"; 
+  margin: 0 2px;
+}
+
+.nav ul li a {
+  text-decoration: underline; 
+  color: blue;
+}
+
+.nav ul li a:hover {
+  color: darkblue; 
+} 
+
+
+@media screen and (max-width: 800px) {
   header {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    flex-direction: column; /* Ajuste para dispositivos móviles */
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
   }
   header img {
-    max-width: 100%;
+    width: 50%; /* Ajuste para dispositivos móviles */
     height: auto;
-  }
-  .titulouno {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
-    height: auto;
-    margin: 20px auto;
-  }
-}
 
-/*# sourceMappingURL=estilo.css.map */
+  }
+
+  /* Reducción de márgenes para encabezados en dispositivos móviles */
+  h1, h2, h3 {
+    margin: 5px 0; /* Ajuste para dispositivos móviles */
+    padding: 10px 0; /* Ajuste para dispositivos móviles */
+    background-color: burlywood;
+    width: 100%;
+    box-sizing: border-box;
+  
+  } 
+}
